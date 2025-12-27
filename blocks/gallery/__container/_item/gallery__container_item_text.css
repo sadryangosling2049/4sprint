@@ -1,0 +1,10 @@
+.gallery__container_item_text {
+    color: black;
+    padding: 0 21px;
+    height: fit-content;
+    font-weight: 900;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

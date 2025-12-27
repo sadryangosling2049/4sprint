@@ -1,0 +1,4 @@
+.form__container {}
+@media screen and (max-width: 1154px) {
+    .form__container {}
+}

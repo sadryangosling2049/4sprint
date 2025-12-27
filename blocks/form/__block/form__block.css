@@ -1,0 +1,14 @@
+.form__block {
+    width: 100%;
+    padding: 34px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media screen and (max-width: 1154px) {
+    .form__block {
+            width: 100%;
+            padding: 25px;
+        }
+}

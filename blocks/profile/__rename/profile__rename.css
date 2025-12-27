@@ -1,0 +1,11 @@
+.profile__rename {
+    background-color: black;
+    border: none;
+    width: 24px;
+    height: 24px;
+}
+@media screen and (max-width: 1154px) {
+    .profile__rename {
+            background-color: black;
+        }
+}

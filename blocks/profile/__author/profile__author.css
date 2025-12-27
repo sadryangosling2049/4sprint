@@ -1,0 +1,9 @@
+.profile__author {
+    max-width: 450px;
+
+}
+@media screen and (max-width: 1154px) {
+    .profile__author {
+            max-width: 282px;
+        }
+}

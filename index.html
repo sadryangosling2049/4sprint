@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествие по России</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+
+</head>
+
+<body>
+    <div class="page">
+        <section class="header">
+            <div class="header__container container__position">
+                <a href="#"> <img src="./images/header__logo.svg" alt="логотип" class="header__logo"></a>
+                <div class="button_themes">
+                    <button class="button_dark_theme">Dark</button>
+                    <button class="button_light_theme">Light</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="form">
+            <div class="form__container">
+                <form class="form__block">
+                    <h1 class="form__block_title">Редактировать профиль</h1>
+                    <div class="form__block_inputs">
+                        <input type="text" placeholder="Имя пользователя" class="form__block_inputs_top">
+                        <input type="text" placeholder="О себе" class="form__block_inputs_bottom">
+                    </div>
+                    <button class="form__block_button">Сохранить</button>
+                    <button class="form__block_exit"> <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                                fill="white" />
+                        </svg></button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <section class="profile">
+            <div class="profile__container container__position">
+                <div class="profile__container_direction">
+                    <img src="./images/20250806_125910.jpg" alt="аватарка" class="profile__image">
+                    <div class="profile__author">
+                        <div class="profile__author_direction">
+                            <h1 class="profile__author_type_name">Андрюшка Гослинг</h1>
+                            <button class="profile__rename"><img src="./images/rename.svg"
+                                    class="profile__rename_style"></button>
+                        </div>
+
+                        <p class="profile__author_type_about">FEELантроп, GAYний и вообще самый красивый</p>
+                    </div>
+                </div>
+                <button class="profile__add-image"><svg width="25" height="16" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7.11111H8.88889V0H7.11111V7.11111H0V8.88889H7.11111V16H8.88889V8.88889H16V7.11111Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery__container container__position">
+                <div class="gallery__container_item">
+                    <img src="./images/karachevsk.png" alt="" class="gallery__container_item_image">
+                    <p class="gallery__container_item_text">Карачаевск <button
+                            class="gallery__container_item_text-like"></button>
+                    </p>
+                </div>
+                <div class="gallery__container_item">
+                    <img src="./images/elbrus.png" alt="" class="gallery__container_item_image">
+                    <p class="gallery__container_item_text">Гора Эльбрус <button
+                            class="gallery__container_item_text-like"></button>
+                    </p>
+                </div>
+                <div class="gallery__container_item">
+                    <img src="./images/dombai.png" alt="" class="gallery__container_item_image">
+                    <p class="gallery__container_item_text">Домбай <button
+                            class="gallery__container_item_text-like"></button>
+                    </p>
+                </div>
+                <div class="gallery__container_item">
+                    <img src="./images/elbrus.png" alt="" class="gallery__container_item_image">
+                    <p class="gallery__container_item_text">Гора Эльбрус <button
+                            class="gallery__container_item_text-like"></button>
+                    </p>
+                </div>
+                <div class="gallery__container_item">
+                    <img src="./images/dombai.png" alt="" class="gallery__container_item_image">
+                    <p class="gallery__container_item_text">Домбай <button
+                            class="gallery__container_item_text-like"></button>
+
+                </div>
+                <div class="gallery__container_item">
+                    <img src="./images/karachevsk.png" alt="" class="gallery__container_item_image">
+                    <div class="gallery__container_item_text">
+                        <p class="gallery__container_item_text-text block-text">Карачаево-Черкеск</p> <button
+                            class="gallery__container_item_text-like"></button>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer__container container__position">
+                <p class="footer__author">© 2025 Андрюшка Гослинг</p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

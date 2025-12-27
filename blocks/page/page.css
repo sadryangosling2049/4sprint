@@ -1,0 +1,16 @@
+.page {
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    color: white;
+    font-family: 'Inter';
+}
+@media screen and (max-width: 1154px) {
+    .page {
+            width: 100%;
+            background-color: black;
+            height: 100%;
+            color: white;
+            font-family: 'Inter';
+        }
+}

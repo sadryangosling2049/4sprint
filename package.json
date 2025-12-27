@@ -1,0 +1,25 @@
+{
+  "name": "4sprint",
+  "version": "1.0.0",
+  "description": "24.12.2025 Начал создавать скелет сайта так как заказчик не предоставил никакого ТЗ и уж тем более макета, приходится быть сразу дизайнером, верстальщиком и продакт менеджером.",
+  "main": "script.js",
+  "scripts": {
+    "start": "css-to-bem-file-structure styles/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadryangosling2049/4sprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sadryangosling2049/4sprint/issues"
+  },
+  "homepage": "https://github.com/sadryangosling2049/4sprint#readme",
+  "devDependencies": {
+    "css-to-bem-file-structure": "^0.0.5"
+  }
+}

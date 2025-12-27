@@ -1,0 +1,7 @@
+.header__container {
+    width: 100%;
+    box-shadow: 0 1px 0 rgba(124, 139, 137, 0.3);
+    padding-bottom: 41px;
+    display: flex;
+    justify-content: space-between;
+}

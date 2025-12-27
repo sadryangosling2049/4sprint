@@ -1,0 +1,700 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Описание. Проектная работа 4</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f5470149-021a-40a1-8dba-31bde38b5392" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">4️⃣</span></div><h1 class="page-title">Описание. Проектная работа 4</h1></header><div class="page-body"><p id="d0e748a3-616b-43a5-85a2-5beaeda08430" class="">В этом и следующих спринтах вы будете работать над сервисом Mesto: интерактивной страницей, куда можно добавлять фотографии, удалять их и ставить лайки.</p><figure id="b608671b-fb3b-47ed-a915-b5fe009b6b3e" class="image"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/__2020-02-25__12.19.27.png"><img style="width:1790px" src="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/__2020-02-25__12.19.27.png"/></a></figure><p id="b08060b2-5ca5-4241-a592-52de24f9ee2d" class="">Вам предстоит сверстать сайт, написать часть логики на JavaScript, опубликовать в Git. Все необходимые знания для этого у вас уже есть.</p><p id="29901d40-4a1f-47d9-928c-567bf5a2dff9" class="">Как только вы перейдёте в урок проектной работы, репозиторий <code>mesto</code> скопируется в ваш аккаунт GitHub. Клонируйте репозиторий на свой компьютер через командную строку и работайте над проектом внутри папки <code>mesto</code>.</p><h1 id="1d54edbd-e9d8-4b88-9d98-344e5a9b93fa" class="">Задание</h1><h2 id="8fd4e486-8317-4003-bf4c-5fc81eccfecd" class="">1. Вёрстка</h2><h3 id="c237b70b-c29e-4f49-b618-344687ea6aaf" class="">Основные требования</h3><ul id="067a5294-cfda-420b-9a9e-c143732057c7" class="bulleted-list"><li style="list-style-type:disc">Внешний вид сайта соответствует макету: 
+<a href="https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1">https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1</a></li></ul><ul id="c29de088-5cd9-4c71-abab-759c7b16f896" class="bulleted-list"><li style="list-style-type:disc">Файловая структура организована по БЭМу.</li></ul><ul id="61736eb9-324b-46c1-a8f9-09cebb640076" class="bulleted-list"><li style="list-style-type:disc">Вёрстка адаптивная: ширина зоны с содержимым должна меняться вместе с шириной окна браузера. При этом не должна появляться горизонтальная полоса прокрутки. Минимальная ширина: 320px (одна карточка в ряд). Максимальная: 1280px (три карточки в ряд).</li></ul><ul id="f715e9df-24a6-4cf4-8906-c24ed602b4e9" class="bulleted-list"><li style="list-style-type:disc">На странице присутствуют 6 карточек с фотографиями. Снимки и названия мест вы можете выбрать сами.</li></ul><h3 id="d32334e3-9c27-48d0-964f-0a12f0115119" class="">Попап редактирования профиля</h3><p id="f0fba08a-8910-482f-9672-95501b9295d0" class="">Реализуйте одно диалоговое окно из макета — «Редактировать профиль». В нём два поля: «Имя» и «О себе», а также кнопка «Сохранить».</p><figure id="f6891c0a-1124-4a11-a357-a71c0af19e2e" class="image"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/__2020-02-25__12.19.13.png"><img style="width:1780px" src="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/__2020-02-25__12.19.13.png"/></a></figure><p id="6095bdf1-d687-4974-9802-970f2e8d0eeb" class="">Среди разработчиков такие диалоговые окна лаконично называют «попап» от английского глагола “pop-up”, который переводится как «неожиданно возникать» или «всплывать».</p><p id="68f77118-5553-486d-a454-a92f855b05e5" class="">Позиционируйте попап фиксированно по центру экрана и задайте попапу полупрозрачный чёрный фон. Полупрозрачный фон верстайте отдельным блоком <code>popup</code>. Внутри него расположите само окно с формой <code>popup__container</code>, спозиционированное по центру.</p><p id="66530e83-b657-40dd-8b62-508dd35893ec" class="">Изначально попап не виден (<code>display: none</code>). Чтобы попап открывался, добавляйте ему модификатор <code>popup_opened</code> с одним-единственным правилом. Правило должно изменять значение свойства <code>display</code> на <code>block</code> или <code>flex</code>. Чтобы закрыть попап, удаляйте у него модификатор <code>popup_opened</code>.</p><h3 id="7293ade2-709a-4324-b415-4d8ef75a9ee8" class="">Переполнение содержимого в блоке</h3><p id="9373c12f-3ab2-40c4-9c76-a402a6fba878" class="">В некоторых частях макета возможно переполнение содержимым. Так в карточке &quot;Карачаево-Черкессия&quot; не вместившийся в блок текст обрезан, и появилось многоточие в конце.
+
+Для иконки сердечка подготовьте сразу и активное состояние — иконка должна закрашиваться чёрным. Сейчас это не пригодится, но потребуется в следующем спринте.</p><figure id="4ac29693-a850-4eed-b534-c37fca422a56" class="image"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/Untitled_(1).png"><img style="width:2000px" src="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/Untitled_(1).png"/></a></figure><p id="c4c1cffc-e4a3-4b21-894d-fb05111cf198" class="">При редактировании данных профиля из попапа пользователь тоже может ввести длинный текст. Чтобы реализовать переполнение блока с появляющимся многоточием в конце, используйте такой набор свойств CSS:</p><pre id="ba450d41-f6c3-401a-a400-34547601592a" class="code"><code>.block {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}</code></pre><p id="f49cd939-92db-422a-ac8c-6ab0ed97b9ce" class="">Изучите свойства <code>text-overflow</code> и <code>white-space</code> самостоятельно в документации CSS.</p><h2 id="c1c1c636-e4b7-411e-8227-901520e24e53" class="">2. JavaScript</h2><h3 id="01b49609-2fb8-48e4-9bac-65eadb558b2a" class="">Открытие и закрытие попапа</h3><p id="7819d893-86ca-44f9-b4e0-67b7a0076d0a" class="">Попап должен открываться по нажатию кнопки «Редактировать», а закрываться — при клике по крестику в правом верхнем углу<em>:</em></p><figure id="4668ea54-7377-43d5-90ae-84b8b7aea8cd"><div class="source"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/04-mesto-01.mp4">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c9e2b10-3d15-4f77-9a8b-d986c3d88ed2/04-mesto-01.mp4</a></div></figure><p id="400d85ea-f4ab-4aa5-930b-065f382785ba" class=""><em>Механизм открытия и закрытия попапа</em></p><p id="edfb7ca5-b3b3-40a7-b7fd-78c8920f51ad" class="">Отслеживайте клик по кнопке методом <code>addEventListener</code>.</p><h3 id="8ff1a2df-31c1-4799-9946-2fb69debc83d" class="">Поля формы</h3><p id="e3a608b4-05f4-411e-a9d7-5697fa385287" class="">При открытии формы поля «Имя» и «О себе» должны быть заполнены теми значениями, которые отображаются на странице.</p><figure id="23a68356-6464-43e6-977d-3d0ff876e865" class="image"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/EDIT_FORM.png"><img style="width:720px" src="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/EDIT_FORM.png"/></a></figure><p id="9a103701-9112-423e-b15c-725998cba527" class="">Если пользователь закрывает попап нажав на крестик, то введённые значения не сохраняются. О том, как работает кнопка «Сохранить», расскажем дальше.</p><h3 id="20033592-aec2-474d-9343-2e9b47c4a7cf" class="">Редактирование имени и информации о себе</h3><p id="e5bc9e9d-2928-480a-bc8e-d858d6ec835e" class="">Открытия и закрытия попапа недостаточно. Как следует из названия попапа, он должен уметь редактировать соответствующие поля страницы. После внесения изменений и нажатия кнопки «Сохранить» информация на странице должна обновиться, а попап автоматически закрыться:</p><figure id="0d3aae30-0ad7-445b-a617-215bdd0984e4"><div class="source"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/04-mesto-02.mp4">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f2f8e11-324e-40df-aea4-5556a4ac30a2/04-mesto-02.mp4</a></div></figure><p id="977a650e-c9a2-4f3d-8a4f-b5550bf52e74" class=""><mark class="highlight-gray"><em>Изменение страницы через попап</em></mark></p><p id="7d5613d9-f4b6-4b22-b3f6-36e8f6521a49" class="">Вам предстоит часто разбираться в непонятном коде или незнакомой теме. Смоделируем такую ситуацию. </p><p id="19611b0b-ea7c-4a8e-8857-e0e4e55e3732" class="">Специальное событие <code>submit</code> отправляет форму (его мы ещё не проходили). Перед вами шаблон кода, реализующий его обработку. Постарайтесь в нём разобраться. Мы оставили в коде комментарии, которые с этим помогут:</p><pre id="f16231be-4601-44f9-9b77-fb4ae92b134f" class="code"><code>// Находим форму в DOM
+let formElement = // Воспользуйтесь методом querySelector()
+
+// Обработчик «отправки» формы, хотя пока
+// она никуда отправляться не будет
+function formSubmitHandler (evt) {
+	evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
+												// Так мы можем определить свою логику отправки.
+												// О том, как это делать, расскажем позже.
+
+	// Находим поля формы в DOM
+	let nameInput = // Воспользуйтесь инструментом .querySelector()
+	let jobInput = // Воспользуйтесь инструментом .querySelector()
+
+	// Получите значение полей из свойства value
+
+	// Выберите элементы, куда должны быть вставлены значения полей
+
+	// Вставьте новые значения с помощью textContent
+}
+
+// Прикрепляем обработчик к форме:
+// он будет следить за событием “submit” - «отправка»
+formElement.addEventListener(&#x27;submit&#x27;, formSubmitHandler);</code></pre><p id="8eac0814-0206-432f-b4cd-252c18a83cfb" class="">Пока эта информация не сохраняется между перезагрузками страницы. Мы научимся сохранять её позже, когда подключим сайт к серверу.</p><h2 id="7a6ce578-ce18-4042-bfec-921744c59a98" class="">3. Git</h2><p id="7a39cd0d-56f2-4766-813b-52e771d7cb4d" class="">Вы уже знаете основы работы с «Гитом»: умеете создавать ветки и коммиты. Научимся создавать их более осмысленно. Так, чтобы в релиз попадало меньше багов, разработчики не мешались друг другу, а история коммитов и ветвлений была понятной.</p><p id="c90bd470-ab63-4292-9e66-586ddb6b68fd" class="">Работа с «Гитом» в большом проекте может выглядеть так. Горизонтальные линии — это ветки, а круги — коммиты:</p><figure id="1fe23dc4-370e-47b9-91da-850e66158c3d" class="image"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/Frame_213.png"><img style="width:2000px" src="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/Frame_213.png"/></a></figure><p id="bdecb5b9-1c2a-4959-bfd7-60a10b7f86f1" class=""><strong>Master</strong> — главная ветка репозитория. Код в ней должен быть полностью работоспособен и готов к публикации на сервере. В нашем случае публикацию будет заменять проверка ревьюера, поэтому смержьте нужные коммиты в master до отправки работы на ревью.</p><p id="ae8be8d5-5a62-482c-ac64-1da67b9b4eda" class=""><strong>Develop</strong> — это основная «рабочая» ветка. Все коммиты должны быть смержены в develop, протестированы и исправлены перед тем, как попадут в master.</p><p id="8a05e895-9fd4-4ac2-9dd2-79e96c1dc3da" class=""><strong>Features</strong> — «функциональные» ветки, их может быть сколько угодно. Такие ветки создают, чтобы реализовать небольшую единицу функциональности: шапку сайта, форму контакта, логику добавления карточки. После того как функциональность реализована, коммиты переносят в develop. А feature-ветку — удаляют.</p><p id="783d031f-4280-40ef-a423-118c95a67c50" class="">Имена функциональных веток начинают со слова <code>feature</code>, а затем кратко описывают функциональность, для которой ветка создана:</p><ul id="4a090339-dc96-4660-b687-f748615631e7" class="bulleted-list"><li style="list-style-type:disc"><code>feature/header</code>;</li></ul><ul id="a8f6e943-a023-4523-b091-b029a782ec3e" class="bulleted-list"><li style="list-style-type:disc"><code>feature/contact-form</code>;</li></ul><ul id="ed3cc5c9-81c1-4545-a189-8d30837c3ff6" class="bulleted-list"><li style="list-style-type:disc"><code>feature/insert-card</code>.</li></ul><p id="37e11015-3a66-4db6-b216-6013ff3bb85c" class="">Обычно сайт тестируют и отлаживают в ветке <code>develop</code>, а затем новые возможности переносят в <code>master</code>. Но иногда ошибки всё-таки всплывают, исправлять их нужно как можно скорее. Для этого предназначены ветки с приставкой <code>hotfixes</code>.</p><p id="91053b2a-8d96-420b-94af-2bd0f5a8b9b8" class=""><strong>Hotfixes</strong> — ветки «быстрых исправлений», когда нужно что-то исправить в ветке <code>master</code>. В нашем случае исправлениями будут требования ревьюеров. Веток быстрых фиксов может быть сколько угодно. Их называют по имени бага с приставкой <code>hotfix/</code>, например:</p><ul id="48936866-1e2a-44de-93f0-07745aac1a77" class="bulleted-list"><li style="list-style-type:disc"><code>hotfix/bem-naming</code>;</li></ul><ul id="d3813cb9-0c9f-407d-9424-10466293bcc1" class="bulleted-list"><li style="list-style-type:disc"><code>hotfix/mobile-layout-400</code>;</li></ul><ul id="5af9c78b-13c6-409d-9440-1139082f75be" class="bulleted-list"><li style="list-style-type:disc"><code>hotfix/card-duplicates</code>.</li></ul><h3 id="478e986d-dc14-4acc-ae89-2bca57348d5c" class="">Профессиональная работа с ветками в общем виде</h3><ol type="1" id="aa9175c3-55da-4f8f-931d-ac9e1789285b" class="numbered-list" start="1"><li>Перед началом нового этапа разработки весь код из <code>master</code> мержат в <code>develop</code>.</li></ol><ol type="1" id="84e57740-034d-4df4-90b4-f4857f6f19ad" class="numbered-list" start="2"><li>Создают функциональную ветку <code>feature/feature-name</code> из <code>develop</code>.</li></ol><ol type="1" id="c17fcbb6-2a1d-44b1-937a-f6fd37f6af44" class="numbered-list" start="3"><li>Разрабатывают новую функциональность в ветке <code>feature/feature-name</code>.</li></ol><ol type="1" id="8183773d-a3c5-4728-a1ea-117a96961085" class="numbered-list" start="4"><li>После завершения разработки код из <code>feature/feature-name</code> мержат в <code>develop</code>.</li></ol><ol type="1" id="3c701084-fb0d-485d-9f69-4d91556a86ce" class="numbered-list" start="5"><li>Ветку <code>feature/feature-name</code> удаляют.</li></ol><ol type="1" id="31e1fa33-4be6-4d5f-bf7d-fb7624d3d309" class="numbered-list" start="6"><li>Если нужно реализовать что-то ещё, повторяют шаги с пункта 2.</li></ol><ol type="1" id="87efbf72-b122-4f19-9852-960d2987a942" class="numbered-list" start="7"><li>Тестируют и исправляют всю функциональность в ветке <code>develop</code>, а затем мержат в <code>master</code>.</li></ol><ol type="1" id="27ccdbde-ea45-4838-8d94-8d1c877ef326" class="numbered-list" start="8"><li>Работу отправляют на ревью.</li></ol><ol type="1" id="99290024-31fc-415e-b3a8-ceffde46e1d1" class="numbered-list" start="9"><li>По результатам ревью создают новую ветку быстрых исправлений <code>hotfix/bug-name</code>. В ней исправляют все проблемы, выявленные на ревью.</li></ol><ol type="1" id="67fdfb3d-a398-4f38-899b-a04edc04a86a" class="numbered-list" start="10"><li>После завершения разработки код из <code>hotfix/bug-name</code> мержится в <code>master</code>.</li></ol><ol type="1" id="c5c6cab6-c8fe-4496-9d78-fb633a45d563" class="numbered-list" start="11"><li>Ветку <code>hotfix/bug-name</code> удаляют.</li></ol><ol type="1" id="17c04819-4c0e-4e52-a7ec-72a155df0274" class="numbered-list" start="12"><li>Если работа все ещё не принята, повторяют шаги, начиная с 9-го.</li></ol><p id="7d99f985-10cc-4253-a87c-01c2faf9cb7b" class="">Фотографии можно брать не из макета, а с сайта <a href="https://unsplash.com/">https://unsplash.com</a> — это коллекция бесплатных фотографий, которые можно использовать, не беспокоясь об авторских правах.</p><h3 id="46d02381-4b49-4e4a-ac41-506d6151795a" class="">Выложите проектную работу на gh-pages</h3><p id="353184f0-a27a-43ad-98f7-a211184d190f" class="">Для того что бы весь мир увидел ваш результат, выложите вашу работу на gh-pages, если уже успели забыть как это делать прочитайте ещё раз инструкцию: </p><figure id="cca52fd6-d458-4353-9144-d813cc2bd536" class="link-to-page"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/%D0%94%D0%B5%D0%BF%D0%BB%D0%BE%D0%B8%CC%86%20%D0%9A%D0%B0%D0%BA%20%D1%81%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D1%83%D1%8E%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%83%20cca52fd6d45843539144d813cc2bd536.html">Деплой. Как сдавать проектную работу</a></figure><p id="196754c6-c69c-44d6-a63a-ae75f3ffe6f9" class="">Обязательно в ветке master создайте файл <a href="http://readme.md/">README.md</a> и [оформите его]. В файле обязательно должна быть ссылка проекта на gh-pages.</p><p id="9f05b6c8-1adf-49e4-af73-d414603779df" class="">
+</p><p id="c494b20e-86d6-49dd-8cbd-7e74a517d2c4" class=""><strong>Чеклист</strong></p><p id="d4f1918d-ce95-4bd4-87bf-4d5269e297c3" class="">Не забудьте проверить себя по чеклисту:</p><figure id="d59563b8-f119-4e86-8aa6-21a183e18f8b"><div class="source"><a href="%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%204%20f5470149021a40a18dba31bde38b5392/checklist-4.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d285ad30-d874-4a4a-a4f0-6917a4de7428/checklist-4.pdf</a></div></figure></div></article></body></html>

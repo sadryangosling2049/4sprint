@@ -1,0 +1,18 @@
+.form__block_inputs {
+
+    width: 100%;
+    margin-bottom: 48px;
+    box-sizing: border-box;
+
+
+}
+@media screen and (max-width: 1154px) {
+    .form__block_inputs {
+    
+            width: 100%;
+            margin-bottom: 48px;
+            box-sizing: border-box;
+    
+    
+        }
+}
